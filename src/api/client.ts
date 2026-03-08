@@ -2,6 +2,9 @@ import axios from 'axios';
 
 export const api = axios.create({
   baseURL: 'https://a855-35-212-160-75.ngrok-free.app',
+  headers: {
+    'ngrok-skip-browser-warning': 'true', // ← this bypasses the warning
+  },
 });
 
 export interface Settings {
