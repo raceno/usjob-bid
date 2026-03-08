@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const api = axios.create({
-  baseURL: 'http://127.0.0.1:5220',
+  baseURL: 'https://0b63-35-212-160-75.ngrok-free.app',
 });
 
 export interface Settings {
