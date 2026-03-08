@@ -39,7 +39,7 @@ const JobDataPage = () => {
   }, [onlyWithResume, onlyNotApplied]);
 
   const rows: Job[] = useMemo(() => {
-    const base = jobs ?? [];
+    const base = Array.isArray(jobs) ? jobs : [];
     return base.filter((job) => {
       if (onlyWithResume && job.resumeStatus !== 'done') return false;
       const opened = job.opened || job.status === 'applied';
